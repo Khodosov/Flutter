@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'AdditionalFilters.dart';
+import 'AddFiltersScreen.dart';
 
-void main() => runApp(MaterialApp(
+
+void main() =>
+    runApp(MaterialApp(
       title: 'SearchDeck',
       theme: ThemeData(
         primarySwatch: Colors.primaryBlack,
@@ -11,6 +13,26 @@ void main() => runApp(MaterialApp(
       home: MyApp(),
     ));
 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Search'),
+        actions: [
+          IconButton(icon: Icon(Icons.search), onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => AddFiltersScreen()),);
+          }),
+        ],
+      ),
+    );
+  }
+}
+
+
+/*
 class MyApp extends StatefulWidget {
   @override
   MyAppState createState() {
@@ -26,15 +48,6 @@ class MyAppState extends State<MyApp> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        leading: pressed
-            ? IconButton(
-                icon: Icon(Icons.keyboard_arrow_left),
-                onPressed: () {
-                  setState(() {
-                    pressed = false;
-                  });
-                })
-            : null,
         title: Text('Search'),
         actions: [
           !pressed
@@ -48,20 +61,8 @@ class MyAppState extends State<MyApp> {
               : Icon(null),
         ],
       ),
-      body: Container(
-        color: Colors.grey[800],
-        child: Stack(
-          children: [
-            SizedBox.expand(
-              child: Image.asset(
-                'assets/images/results.jpg',
-                fit: BoxFit.fill,
-              ),
-            ),
-            pressed ? new AdditionalFilters() : Container(),
-          ],
-        ),
-      ),
+      body: Container(),
     );
   }
 }
+*/

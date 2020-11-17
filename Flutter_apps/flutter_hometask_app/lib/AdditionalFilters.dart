@@ -1,32 +1,33 @@
 import 'package:flutter/material.dart';
 
-import 'Results.dart';
 import 'SwitchButton.dart';
 
 class AdditionalFilters extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: Colors.grey[100],
+        borderRadius: BorderRadius.circular(20)
+      ),
+      height: 300,
       width: double.infinity,
       padding: const EdgeInsets.all(20),
-      color: Colors.white,
+      
       // Filters are here. Results are also here
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.only(bottom: 15),
-            child: Row(
-              children: [
-                Text(
-                  'Search for Best Deal',
-                  style: TextStyle(
-                    color: Colors.primaryBlack,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 20,
-                  ),
-                ),
-              ],
+          Align(
+            alignment: Alignment.topLeft,
+            // margin: EdgeInsets.only(bottom: 15),
+            child: Text(
+              'Search for Best Deal',
+              style: TextStyle(
+                color: Colors.primaryBlack,
+                fontWeight: FontWeight.w600,
+                fontSize: 20,
+              ),
             ),
           ),
           Container(
@@ -162,7 +163,7 @@ class AdditionalFilters extends StatelessWidget {
               ],
             ),
           ),
-          Results(),
+
         ],
       ),
     );
