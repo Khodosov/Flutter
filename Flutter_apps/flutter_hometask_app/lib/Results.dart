@@ -8,7 +8,6 @@ class Results extends StatelessWidget {
     return ListView(
       scrollDirection: Axis.vertical,
       addAutomaticKeepAlives: false,
-
       children: [
         ProductCard(),
         ProductCard(),

@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'AddFiltersScreen.dart';
 
-
-void main() =>
-    runApp(MaterialApp(
+void main() => runApp(MaterialApp(
       title: 'SearchDeck',
       theme: ThemeData(
         primarySwatch: Colors.primaryBlack,
@@ -21,16 +20,19 @@ class MyApp extends StatelessWidget {
         centerTitle: true,
         title: Text('Search'),
         actions: [
-          IconButton(icon: Icon(Icons.search), onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => AddFiltersScreen()),);
-          }),
+          IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AddFiltersScreen()),
+                );
+              }),
         ],
       ),
     );
   }
 }
-
 
 /*
 class MyApp extends StatefulWidget {
