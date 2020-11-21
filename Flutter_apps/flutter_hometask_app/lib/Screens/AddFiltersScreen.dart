@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hometask_app/ComplicatedWidgets/BrandCategoryRelatedSelections.dart';
 import 'package:flutter_hometask_app/ComplicatedWidgets/BrandSelection.dart';
 
 import 'package:flutter_hometask_app/ComplicatedWidgets/CategorySelection.dart';
@@ -69,8 +70,7 @@ class _AddFiltersScreenState extends State<AddFiltersScreen> {
                     ),
                   ),
                 ),
-                CategorySelection(),
-                BrandSelection(),
+                BrandCategoryRelatedSelections(),
                 Container(
                   height: 40,
                   margin: const EdgeInsets.only(top: 5),

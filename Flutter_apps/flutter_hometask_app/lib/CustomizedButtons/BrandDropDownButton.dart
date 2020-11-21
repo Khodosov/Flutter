@@ -8,6 +8,7 @@ class Item {
 
 class BrandDropDownButton extends StatefulWidget {
   State createState() => BrandDropDownButtonState();
+
 }
 
 class BrandDropDownButtonState extends State<BrandDropDownButton> {
@@ -67,4 +68,5 @@ class BrandDropDownButtonState extends State<BrandDropDownButton> {
       }).toList(),
     );
   }
+
 }
