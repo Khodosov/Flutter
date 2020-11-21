@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hometask_app/ComplicatedWidgets/BrandSelection.dart';
 
-import 'CategorySelection.dart';
-import 'Results.dart';
-import 'SwitchButton.dart';
+import 'package:flutter_hometask_app/ComplicatedWidgets/CategorySelection.dart';
+import 'package:flutter_hometask_app/CustomizedButtons/SwitchButton.dart';
+
+import 'package:flutter_hometask_app/ComplicatedWidgets/Results.dart';
 
 class AddFiltersScreen extends StatefulWidget {
   @override
@@ -68,7 +70,7 @@ class _AddFiltersScreenState extends State<AddFiltersScreen> {
                   ),
                 ),
                 CategorySelection(),
-                // Place for Product selection
+                BrandSelection(),
                 Container(
                   height: 40,
                   margin: const EdgeInsets.only(top: 5),
@@ -144,6 +146,7 @@ class _AddFiltersScreenState extends State<AddFiltersScreen> {
                   ),
                 )
               : Container(),
+          //
         ],
       ),
     );

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'AddFiltersScreen.dart';
+import 'package:flutter_hometask_app/Screens/AddFiltersScreen.dart';
 
 void main() => runApp(MaterialApp(
       title: 'SearchDeck',

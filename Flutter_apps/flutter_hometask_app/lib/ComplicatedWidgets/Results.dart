@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'ProductCard.dart';
+import 'package:flutter_hometask_app/ComplicatedWidgets/ProductCard.dart';
 
 class Results extends StatelessWidget {
   @override

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hometask_app/CustomizedButtons/BrandDropDownButton.dart';
 
-class CategorySelection extends StatefulWidget {
+
+class BrandSelection extends StatefulWidget {
   @override
-  _CategorySelectionState createState() => _CategorySelectionState();
+  _BrandSelectionState createState() => _BrandSelectionState();
 }
 
-class _CategorySelectionState extends State<CategorySelection> {
-  String defaultTitle = 'Choose a category';
-  String categoryTitle = '';
+class _BrandSelectionState extends State<BrandSelection> {
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class _CategorySelectionState extends State<CategorySelection> {
           Padding(
             padding: const EdgeInsets.all(5.0),
             child: Text(
-              'Choose a Category',
+              'Choose a Brand',
               style: TextStyle(
                 color: Colors.grey[600],
                 fontSize: 14,
@@ -35,18 +35,7 @@ class _CategorySelectionState extends State<CategorySelection> {
           Padding(
             padding: const EdgeInsets.all(5.0),
             child: DropdownButtonHideUnderline(
-              child: DropdownButton<String>(
-                iconSize: 25,
-                icon: Icon(Icons.keyboard_arrow_down),
-                items: <String>['Aaaaaaaaaa', 'Baaaaaaa', 'C', 'D']
-                    .map((String value) {
-                  return new DropdownMenuItem<String>(
-                    value: value,
-                    child: new Text(value),
-                  );
-                }).toList(),
-                onChanged: (_) {},
-              ),
+              child: BrandDropDownButton(),
             ),
           ),
         ],
