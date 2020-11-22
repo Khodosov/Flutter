@@ -8,6 +8,7 @@ class BrandCategoryRelatedSelections extends StatefulWidget {
 
 class BrandCategoryRelatedSelectionsState
     extends State<BrandCategoryRelatedSelections> {
+  bool justChanged = false;
   Item selectedCategory;
   String pickedName;
   List<Item> categories = <Item>[
@@ -146,8 +147,6 @@ class BrandCategoryRelatedSelectionsState
         )),
   ];
 
-  var varList;
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -181,6 +180,7 @@ class BrandCategoryRelatedSelectionsState
                       setState(() {
                         selectedCategory = Value;
                         pickedName = selectedCategory.name;
+                        justChanged = true;
                       });
                     },
                     items: categories.map((Item category) {
@@ -218,7 +218,7 @@ class BrandCategoryRelatedSelectionsState
               Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Text(
-                  'Choose a Category',
+                  'Choose a Brand',
                   style: TextStyle(
                     color: Colors.grey[600],
                     fontSize: 14,
@@ -229,7 +229,9 @@ class BrandCategoryRelatedSelectionsState
               Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: DropdownButtonHideUnderline(
-                  child: _dropDownButtonDisplay(pickedName),
+                  child: !justChanged
+                      ? _dropDownButtonDisplay(pickedName)
+                      : Container(),
                 ),
               ),
             ],
