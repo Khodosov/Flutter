@@ -70,9 +70,9 @@ class _AddFiltersScreenState extends State<AddFiltersScreen> {
                     ),
                   ),
                 ),
-                //BrandCategoryRelatedSelections(),
-                CategorySelection(),
-                BrandSelection(),
+                BrandCategoryRelatedSelections(),
+                // CategorySelection(),
+                // BrandSelection(),
                 Container(
                   height: 40,
                   margin: const EdgeInsets.only(top: 5),
