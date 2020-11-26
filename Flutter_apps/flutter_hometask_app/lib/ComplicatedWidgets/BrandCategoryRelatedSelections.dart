@@ -43,7 +43,7 @@ class BrandCategoryRelatedSelectionsState
           color: Colors.primaryBlack,
         )),
   ];
-  
+
 
   @override
   Widget build(BuildContext context) {
