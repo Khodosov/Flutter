@@ -1,9 +1,10 @@
 import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:audioplayers/audioplayers.dart';
+
 
 void main() => runApp(MaterialApp(
+  debugShowCheckedModeBanner: false,
   title: 'JackBox saundbar',
   theme: ThemeData(
     primarySwatch: Colors.primaryBlack,
@@ -19,7 +20,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   static AudioCache player = new AudioCache();
 
-
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
         children: [
           FlatButton(
               onPressed: (){
-                player.play("D:\java_all\Flutter\Flutter_apps\jackbox_saundbar\assets\sounds\Pskov.mp3");
+                player.play("sounds/Pskov.mp3");
               },
               child: Container(
                 height: 160,
@@ -38,14 +38,22 @@ class _MyAppState extends State<MyApp> {
                     color: Colors.grey,
                     borderRadius: BorderRadius.circular(40)
                 ),
-                child: Center(child: Text('Test button')),
+                child: Center(
+                    child: Text('Запускаем Псков',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                )
+                ),
               )
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               FlatButton(
-                  onPressed: null,
+                  onPressed:(){
+                    player.play("sounds/Pskov.mp3");
+                  },
                   child: Container(
                     height: 160,
                     width: 160,
@@ -56,7 +64,9 @@ class _MyAppState extends State<MyApp> {
                   )
               ),
               FlatButton(
-                  onPressed: null,
+                  onPressed: (){
+                    player.play("sounds/Pskov.mp3");
+                  },
                   child: Container(
                     height: 160,
                     width: 160,
